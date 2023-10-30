@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vite-project/',
+  base: '/Advice-generator-app-React-Tailwind-and-Vite',
   plugins: [react()],
 })

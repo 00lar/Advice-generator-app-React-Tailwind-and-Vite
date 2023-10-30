@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://00lar.github.io/Advice-generator-app-React-Tailwind-and-Vite",
+  "homepage": "https://00lar.github.io/Advice-generator-app-React-Tailwind-and-Vite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
