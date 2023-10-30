@@ -8,8 +8,8 @@ const CardContextProvider = ({children}) => {
 
         const [item, setItem] = useState({
             slip: {
-                id: "",
-                advice: ""
+                id: "217",
+                advice: "Take a while."
             }
         });
 
@@ -17,9 +17,7 @@ const CardContextProvider = ({children}) => {
             try {
               const res = await fetch(url);
               const data = await res.json();
-              setTimeout(() => {
-                setItem(data);
-              }, 1000);
+                setItem(data);;
             } catch (error) {
               console.error(error);
             }

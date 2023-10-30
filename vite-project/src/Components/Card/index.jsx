@@ -9,7 +9,6 @@ const Card = () => {
     const generate = () => {
         console.log("Hola")
         context.fetchRandomAdvice()
-        context.fetchRandomAdvice()
     }
 
     return (
