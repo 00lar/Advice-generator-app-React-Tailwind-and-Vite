@@ -6,29 +6,35 @@ const CardContext = createContext();
 
 const CardContextProvider = ({children}) => {
 
-    const [item,setItem] = useState([{
-        id: "117",
-        advice: "It is easy to sit up and take notice, whats difficult is getting up an taking action"
-    }])
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch(url);
-                const data = await res.json();
-                setItem(data);
-            } catch (error) {
-                console.error(error);
+        const [item, setItem] = useState({
+            slip: {
+                id: "",
+                advice: ""
             }
-        };
-        fetchData(); 
-    }, []); 
+        });
+
+        const fetchRandomAdvice = async () => {
+            try {
+              const res = await fetch(url);
+              const data = await res.json();
+              setTimeout(() => {
+                setItem(data);
+              }, 1000);
+            } catch (error) {
+              console.error(error);
+            }
+          };
+        
+          useEffect(() => {
+            fetchRandomAdvice();
+          }, []);
 
     return (
         <CardContext.Provider
         value = {{
             item,
             setItem,
+            fetchRandomAdvice,
         }}>
             {children}
         </CardContext.Provider>
