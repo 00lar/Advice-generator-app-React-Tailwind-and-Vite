@@ -1,4 +1,4 @@
-import { PauseIconSVG } from "../Icons"
+import { PauseIconSVG, DiceIconSVG } from "../Icons"
 import { CardContext } from "../../Context"
 import { useContext } from "react"
 
@@ -23,11 +23,11 @@ const Card = () => {
                 </div>
                 <div className=" w-full h-24 relative">
                 <button
-                className=" w-14 h-14 rounded-full bg-Primary2 absolute left-1/2 transform -translate-x-1/2 -bottom-8"
+                className=" w-16 h-16 flex justify-center items-center rounded-full bg-Primary2 absolute left-1/2 transform -translate-x-1/2 -bottom-8"
                 onClick={() => generate()}
                 >
-
-        </button>
+                    <DiceIconSVG></DiceIconSVG>
+                </button>
                 </div>
                 
             </div>

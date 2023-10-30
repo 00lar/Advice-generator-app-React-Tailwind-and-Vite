@@ -1,4 +1,5 @@
 import {PauseIcon} from "@heroicons/react/24/solid"
+import iconDice from "./icon-dice.svg"
 
 function PauseIconSVG () {
     return (
@@ -11,4 +12,10 @@ function PauseIconSVG () {
     )
 }
 
-export {PauseIconSVG}
+const DiceIconSVG = () => { 
+    return (
+    <img src={iconDice} className="w-8 h-8" alt="Dice icon" />
+    )
+}
+
+export {PauseIconSVG, DiceIconSVG}
